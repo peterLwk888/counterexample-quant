@@ -1,0 +1,9 @@
+{
+  "hypotheses": [
+    {"name":"extreme_market_volatility","economic_reason":"Heightened uncertainty and forced position reductions may disrupt continuation and induce short-horizon reversals.","variable":"market_volatility_20","operator":">","threshold_type":"percentile","threshold":90,"expected_effect":"momentum_rank_ic_decreases"},
+    {"name":"sharp_market_rebound","economic_reason":"A sharp broad rebound may disproportionately lift recent losers, weakening the relative performance of recent winners.","variable":"market_return_5","operator":">","threshold_type":"percentile","threshold":90,"expected_effect":"momentum_rank_ic_decreases"},
+    {"name":"deep_market_drawdown","economic_reason":"Severe market stress can cause indiscriminate liquidation and changes in relative risk exposures that weaken continuation.","variable":"market_drawdown_60","operator":"<","threshold_type":"percentile","threshold":10,"expected_effect":"momentum_rank_ic_decreases"},
+    {"name":"unusual_market_volume","economic_reason":"An unusually large volume of trading may reflect rapid repricing and position unwinds that disrupt existing trends.","variable":"market_volume_zscore_20","operator":">","threshold_type":"percentile","threshold":90,"expected_effect":"momentum_rank_ic_decreases"},
+    {"name":"compressed_momentum_spread","economic_reason":"When past returns are tightly clustered, relative momentum rankings may largely reflect noise and have weaker persistence.","variable":"momentum_dispersion","operator":"<","threshold_type":"percentile","threshold":10,"expected_effect":"momentum_rank_ic_decreases"}
+  ]
+}
